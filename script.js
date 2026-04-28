@@ -15,6 +15,7 @@ let currentQuestion = {
 // Function to display the current question
 function displayQuestion() {
     // Your turn: use document.getElementById to get the question text element
+    
     // Set its innerText to currentQuestion.question
     let questionText = document.getElementById("question-text");
     questionText.innerText = currentQuestion.question;
