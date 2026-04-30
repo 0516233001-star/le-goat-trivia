@@ -2,93 +2,112 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #1e3a8a;
-    color: white;
+    background-color: #f0f8ff;
 }
 
 .game-container {
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
-    background-color: #2563eb;
-    border-radius: 10px;
+    background-color: white;
     padding: 30px;
-}
-
-header {
-    text-align: center;
-    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    font-size: 2.5em;
-    margin: 0 0 20px 0;
-    font-weight: bold;
+    text-align: center;
+    color: #2c5aa0;
+    margin-bottom: 30px;
 }
 
-.score-info {
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.2em;
+.score-section {
+    text-align: right;
+    font-size: 18px;
     font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-.question-container {
-    background-color: white;
-    color: #1e3a8a;
-    padding: 25px;
+.question-section {
+    margin-bottom: 30px;
+}
+
+#question {
+    background-color: #e8f4fd;
+    padding: 20px;
     border-radius: 8px;
-    margin-bottom: 25px;
+    text-align: center;
+    color: #2c5aa0;
 }
 
-#question-text {
-    font-size: 1.4em;
-    margin: 0;
-    font-weight: bold;
+.answer-section {
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.answers-container {
-    margin-bottom: 25px;
-}
-
-.answer-btn {
-    display: block;
-    width: 100%;
-    padding: 15px;
+#answer-input {
+    width: 70%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
     margin-bottom: 10px;
-    font-size: 1.1em;
-    font-weight: bold;
-    background-color: #10b981;
+}
+
+#submit-btn {
+    background-color: #4CAF50;
     color: white;
     border: none;
+    padding: 12px 24px;
+    font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.answer-btn:hover {
-    background-color: #059669;
+#submit-btn:hover {
+    background-color: #45a049;
 }
 
-.feedback {
+.feedback-section {
     text-align: center;
-    font-size: 1.3em;
-    font-weight: bold;
     margin-bottom: 20px;
     min-height: 30px;
 }
 
-.next-btn {
-    display: block;
-    margin: 0 auto;
-    padding: 12px 30px;
-    font-size: 1.1em;
+#feedback {
+    font-size: 18px;
     font-weight: bold;
-    background-color: #f59e0b;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
-.next-btn:hover {
-    background-color: #d97706;
+.controls {
+    text-align: center;
+    margin-bottom: 20px;
 }
+
+#start-btn, #next-btn, #restart-btn {
+    background-color: #2c5aa0;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+#start-btn:hover, #next-btn:hover, #restart-btn:hover {
+    background-color: #1e3d6f;
+}
+
+.results-section {
+    text-align: center;
+    display: none;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#next-btn {
+    display: none;
+}
+
