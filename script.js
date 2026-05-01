@@ -9,10 +9,43 @@ let questions = [
     {
         question: "How many players are on a basketball team on the court?",
         correctAnswer: "5"
+    },
+    {
+        question: "What sport does Lebron James play?",
+        correctAnswer: "basketball"
+    },
+       { 
+        question: "How many people can a football team have on the field?",
+        correctAnswer: "11"
+    },
+    { 
+        question: "Who won the 2025 MLB world Championship?",
+        correctAnswer: "dodgers"
+    },
+    {
+        question: "What sport uses a puck?",
+        correctAnswer: "hockey"
+    },
+    {
+        question: "How much points is a Tochdown worth?",
+        correctAnswer: "6"
+    },
+    {
+        question: "What team won the Superbowl in 2022?",
+        correctAnswer: "rams"
+    },
+    {
+        question: "How many people can a soccer team have on the field?",
+        correctAnswer: "11"
+    },
+    {
+        question: "Who won the 2024 Nba Finals",
+        correctAnswer: "celtics"
     }
 ];
 
 let currentQuestionIndex = 0;
+
 
 // Function to display a question
 function displayQuestion() {
@@ -22,4 +55,47 @@ function displayQuestion() {
     // Clear the input field
     let answerInput = document.getElementById("answer-input");
     answerInput.value = "";
+}
+
+function nextQuestion() {
+    // Check if there are more questions
+    if (currentQuestionIndex < questions.length - 1) {
+        currentQuestionIndex = currentQuestionIndex + 1;
+        displayQuestion();
+    } else {
+        alert("Quiz finished! You've completed all questions!");
+    }
+}
+
+
+
+function checkAnswer() {
+    let userAnswer = document.getElementById("answer-input").value;
+    let correctAnswer = questions[currentQuestionIndex].correctAnswer;
+    
+    if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+        alert("Correct! Great job!");
+    } else {
+        alert("Wrong! The correct answer is: " + correctAnswer);
+    }
+
+    nextQuestion();
+
+}
+
+// Display the first question when page loads
+displayQuestion();
+
+// Add event listener to the submit button
+let submitButton = document.getElementById("submit-btn");
+submitButton.addEventListener("click", checkAnswer);
+
+function startGame() {
+    // Hide the start screen
+    let startScreen = document.getElementById("start-screen");
+    startScreen.style.display = "none";
+    
+    // Show the game screen
+    let gameScreen = document.getElementById("game-screen");
+    gameScreen.style.display = "block";
 }
