@@ -1,5 +1,6 @@
 console.log("script started");
-
+let questionTimer;
+let timeLeft = 30; 
 // First, let's create some sample questions with typed answers
 let questions = [
     {
@@ -7,7 +8,7 @@ let questions = [
         correctAnswer: "tennis"
     },
     {
-        question: "How many players are on a basketball team on the court?",
+        question: "How many players are on a basketball team are on the court?",
         correctAnswer: "5"
     },
     {
@@ -32,7 +33,7 @@ let questions = [
     },
     {
         question: "What team won the Superbowl in 2022?",
-        correctAnswer: "rams"
+        correctAnswer: "los angles rams"
     },
     {
         question: "How many people can a soccer team have on the field?",
@@ -136,6 +137,39 @@ function displayQuestion() {
     // Clear the input field
     let answerInput = document.getElementById("answer-input");
     answerInput.value = "";
+
+    startQuestionTimer();
+}
+
+function startQuestionTimer() {
+    // Reset time for each question
+    timeLeft = 30;
+    
+    // Update the timer display immediately
+    updateTimerDisplay();
+    
+    // Clear any existing timer
+    if (questionTimer) {
+        clearInterval(questionTimer);
+    }
+    
+    // Start the countdown
+    questionTimer = setInterval(function() {
+        timeLeft = timeLeft - 1;
+        updateTimerDisplay();
+        
+        // Check if time is up
+        if (timeLeft <= 0) {
+            clearInterval(questionTimer);
+            alert("Time's up! The correct answer was: " + questions[currentQuestionIndex].correctAnswer);
+            nextQuestion();
+        }
+    }, 1000); // Run every 1 second
+}
+
+function updateTimerDisplay() {
+    let timerElement = document.getElementById("timer");
+    timerElement.innerText = "Time: " + timeLeft + " seconds";
 }
 
 function nextQuestion() {
@@ -151,6 +185,8 @@ function nextQuestion() {
 
 
 function checkAnswer() {
+    clearInterval(questionTimer); // Stop the timer when answer is submitted
+    
     let userAnswer = document.getElementById("answer-input").value;
     let correctAnswer = questions[currentQuestionIndex].correctAnswer;
     
@@ -172,6 +208,7 @@ let submitButton = document.getElementById("submit-btn");
 submitButton.addEventListener("click", checkAnswer);
 
 function startGame() {
+    alert("Game started!");
     // Hide the start screen
     let startScreen = document.getElementById("start-screen");
     startScreen.style.display = "none";
@@ -180,9 +217,10 @@ function startGame() {
     let gameScreen = document.getElementById("game-screen");
     gameScreen.style.display = "block";
 }
-function startGame() {
-    alert("Game started!");
-}
 
 let startButton = document.getElementById("start-btn");
 startButton.addEventListener("click", startGame);
+
+
+
+
