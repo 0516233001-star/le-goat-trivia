@@ -1,6 +1,6 @@
 console.log("script started");
-let questionTimer;
-let timeLeft = 30; 
+let questionTimer; 
+let timeLeft = 15; 
 // First, let's create some sample questions with typed answers
 let questions = [
     {
@@ -41,7 +41,7 @@ let questions = [
     },
     {
         question: "Who won the 2024 Nba Finals",
-        correctAnswer: "celtics"
+        correctAnswer: "boston celtics"
     },
     {
         question: "How many Nfl teames are there?",
@@ -143,7 +143,7 @@ function displayQuestion() {
 
 function startQuestionTimer() {
     // Reset time for each question
-    timeLeft = 30;
+    timeLeft = 15;
     
     // Update the timer display immediately
     updateTimerDisplay();
@@ -211,11 +211,10 @@ function startGame() {
     alert("Game started!");
     // Hide the start screen
     let startScreen = document.getElementById("start-screen");
-    startScreen.style.display = "none";
     
     // Show the game screen
     let gameScreen = document.getElementById("game-screen");
-    gameScreen.style.display = "block";
+ 
 }
 
 let startButton = document.getElementById("start-btn");
