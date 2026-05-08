@@ -1,6 +1,8 @@
 console.log("script started");
 let questionTimer; 
-let timeLeft = 15; 
+let timeLeft = 15;
+ let score = 0;
+
 // First, let's create some sample questions with typed answers
 let questions = [
     {
@@ -177,11 +179,10 @@ function nextQuestion() {
     if (currentQuestionIndex < questions.length - 1) {
         currentQuestionIndex = currentQuestionIndex + 1;
         displayQuestion();
-    } else {
-        alert("Quiz finished! You've completed all questions!");
-    }
+    }  else {
+    alert("Quiz finished! You've completed all questions! Your score: " + score + " out of " + questions.length);
 }
-
+}
 
 
 function checkAnswer() {
@@ -192,6 +193,8 @@ function checkAnswer() {
     
     if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
         alert("Correct! Great job!");
+        score = score +1;
+        updateScoreDisplay();
     } else {
         alert("Wrong! The correct answer is: " + correctAnswer);
     }
@@ -199,9 +202,6 @@ function checkAnswer() {
     nextQuestion();
 
 }
-
-// Display the first question when page loads
-displayQuestion();
 
 // Add event listener to the submit button
 let submitButton = document.getElementById("submit-btn");
@@ -214,11 +214,18 @@ function startGame() {
     
     // Show the game screen
     let gameScreen = document.getElementById("game-screen");
- 
+    
+    displayQuestion();
 }
 
 let startButton = document.getElementById("start-btn");
 startButton.addEventListener("click", startGame);
+
+function updateScoreDisplay() {
+    let scoreElement = document.getElementById("score");
+    scoreElement.innerText = score;
+}
+
 
 
 
