@@ -1,6 +1,5 @@
 console.log("script started");
 let questionTimer; 
-let timeLeft = 15;
  let score = 0;
 
 // First, let's create some sample questions with typed answers
@@ -35,7 +34,7 @@ let questions = [
     },
     {
         question: "What team won the Superbowl in 2022?",
-        correctAnswer: "los angles rams"
+        correctAnswer: "los angeles rams"
     },
     {
         question: "How many people can a soccer team have on the field?",
@@ -83,7 +82,7 @@ let questions = [
     },
     {
         question: "What was the second team Wayne Gretzky played for?",
-        correctAnswer: "los angles kings"
+        correctAnswer: "los angeles kings"
     },
     {
         question: "What team does Paul Skenes play for?",
@@ -123,8 +122,8 @@ let questions = [
         correctAnswer: "Nikola Jokic"
     }, 
     {
-        question: "What Nba player is know for there shoes brand Jordan?",
-        correctAnswer: "Micheal Jordan"
+        question: "What is the only nfl team to go 0-18?",
+        correctAnswer: "miami dolphines"
     },
 ];
 
