@@ -9,20 +9,20 @@ let questions = [
         correctAnswer: "tennis"
     },
     {
-        question: "How many players are on a basketball team are on the court?",
-        correctAnswer: "5"
+        question: "What was the biggest margin of victory ever in a Triple Crown race?",
+        correctAnswer: "31 lenghts"
     },
     {
         question: "What sport does Lebron James play?",
         correctAnswer: "basketball"
     },
        { 
-        question: "How many people can a football team have on the field?",
-        correctAnswer: "11"
+        question: "The first NHL All-Star game was held as a benefit for what injured star?",
+        correctAnswer: "Ace Bailey"
     },
     { 
-        question: "Who won the 2025 MLB world Championship?",
-        correctAnswer: "dodgers"
+        question: "How many total minutes of action are there in an average baseball game?",
+        correctAnswer: "18 minutes"
     },
     {
         question: "What sport uses a puck?",
@@ -37,40 +37,40 @@ let questions = [
         correctAnswer: "los angeles rams"
     },
     {
-        question: "How many people can a soccer team have on the field?",
-        correctAnswer: "11"
+        question: "A sporting event is held every year on Memorial Day. What is it?",
+        correctAnswer: "Indianapolis 500"
     },
     {
-        question: "Who won the 2024 Nba Finals",
-        correctAnswer: "boston celtics"
+        question: "What is the only team to win the World Series in their home stadium?",
+        correctAnswer: "Houston Astros"
     },
     {
         question: "How many Nfl teames are there?",
         correctAnswer: "32"
     },
     {
-        question: "How many Nba teams are there?",
-        correctAnswer: "30"
+        question: "What country has competed the most times in the Summer Olympics without winning a gold medal?",
+        correctAnswer: "Philippines"
     },
     {
         question: "How many championships do the Celtics have?",
         correctAnswer: "18"
     },
     {
-        question: "How many rings does Stephen Curry have?",
-        correctAnswer: "4"
+        question: "Which Olympic athlete has won the most gold medals?",
+        correctAnswer: "Michael Phelps"
     },
     {
         question: "How many rings does Lebron James have?",
         correctAnswer: "4"
     },
     {
-        question: "What sport does Cristiano Ronaldo play?",
-        correctAnswer: "Soccer"
+        question: "What year was the first modern Olympics held?",
+        correctAnswer: "1896"
     },
     {
-        question: "Kobe Bryant played for what team",
-        correctAnswer: " los angeles lakers"
+        question: " How old was Tiger Woods when he won the Masters?",
+        correctAnswer: "21"
     },
     {
         question: "Stephen Curry plays for what team?",
@@ -101,12 +101,12 @@ let questions = [
         correctAnswer: "bill russell"
     },
      {
-        question: "How many rings does Bill Russell have?",
-        correctAnswer: "11"
+        question: "Who was the first golfer to reach one million dollars in career earnings on the PGA Tour?",
+        correctAnswer: "Arnold Palmer"
     },
      {
-        question: "What Nba player is nicknamed the Chef?",
-        correctAnswer: "Stephen Curry"
+        question: "How many Olympic games were held in countries that no longer exist?",
+        correctAnswer: "3"
     },
 
     {
@@ -114,15 +114,15 @@ let questions = [
         correctAnswer: "King James"
     },
     {
-        question: "What is Kobe Bryant's nickname?",
-        correctAnswer: "the black mamba"
+        question: "How many minutes was the longest recorded point in the history of tennis?",
+        correctAnswer: "29 minutes"
     },
     {
-        question: "What center in Nba likes Horses?",
-        correctAnswer: "Nikola Jokic"
+        question: "Which is the only team to play in every soccer World Cup tournament?",
+        correctAnswer: "Brazil"
     }, 
     {
-        question: "What is the only nfl team to go 0-18?",
+        question: "What is the only nfl team to go 18-0?",
         correctAnswer: "miami dolphines"
     },
 ];
